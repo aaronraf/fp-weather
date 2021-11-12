@@ -1,13 +1,168 @@
 html, body {
     margin: 0;
     padding: 0;
-    margin-bottom: 0.5rem;
-    /* font-family: 'Red Hat Display', sans-serif !important; */
+    font-family: 'Montserrat', sans-serif !important;
     font-weight: 500;
     line-height: 1.2;
     color: inherit;
 }
 
+#body {
+    color: white;
+    background-color: #0F1424;
+}
+
+#navbar {
+    margin-bottom: 10rem;
+}
+
+.container-fluid {
+    padding-left: 52px;
+    padding-right: 52px;
+}
+
+.nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+#navActive {
+    width: 105px;
+    height: 36px;
+    background-color:#292E6E;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navActive:hover {
+    background-color: #5847EB;
+}
+
+#navInactive:hover {
+    color: white;
+}
+
 #greetings {
     font-weight: 700;
+}
+
+.contentCard {
+    background-color: hsla(235, 45%, 61%, 0.2);
+    width: fit-content;
+    height: auto;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainHeading{
+    font-weight: 600;
+    width: fit-content;
+}
+
+#mainCard{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    margin: 2rem 3rem;
+    width: 22rem;
+    background-color: hsl(235, 46%, 20%);
+}
+
+#nuCard {
+    border-radius: 15px;
+    width: 22rem; 
+    background-color: hsl(246, 80%, 60%);
+}
+
+#headingCity {
+    font-weight: 600;
+}
+
+#weatherDate {
+    font-size: smaller;
+}
+
+#weatherIcon {
+    width: 12rem;
+    align-self: center;
+    color: white;
+}
+
+#weatherTemp {
+    margin-bottom: 1rem;
+}
+
+#weatherDesc {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+#detailCard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 15px;
+    margin: 2rem 3rem;
+    width: 22rem;
+    background-color: hsl(235, 46%, 20%);
+}
+
+#humidity {
+    border-radius: 15px;
+    width: 22rem; 
+    height: 337px;
+    background-color: #56C2E6;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#windSpeed {
+    border-radius: 15px;
+    width: 22rem; 
+    height: 224px;
+    background-color: #EF5DA8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#chance {
+    border-radius: 15px;
+    width: 22rem; 
+    height: 112px;
+    background-color: hsl(145, 58%, 55%);
+}
+
+.detailHeading {
+    font-weight: 600;
+}
+
+#detailSubTitle {
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 6px;
+}
+
+#detailContent {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding: 0%;
+}
+
+#stats {
+    border-radius: 15px;
+    width: auto; 
+    height: auto;
+    margin: 1rem;
+    padding: 10px;
+    background-color: hsl(235, 46%, 20%);
 }
