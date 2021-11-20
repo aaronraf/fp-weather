@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - The Weather App</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Images/weather-icon-png-11063.png"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark mx-5" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand m-0 p-3" href="homePage.html">
+          <img src="./Images/brand.svg" alt="" />
+        </a>
+        <form class="col-4 d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search (e.g. New York)"
+            aria-label="Search"
+            id="searchBar"
+          />
+          <button
+            type="button"
+            class="btn me-2"
+            id="search"
+            onclick="information()"
+          >
+            Search
+          </button>
+        </form>
+        <div class="mr-auto">
+          <button
+            class="navbar-toggler"
+            type="submit"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse mx-auto"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div id="navActive">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="navInactive" href="about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Greetings -->
+      <div class="container mt-5">
+        <h1 class="text-center" id="greetings"></h1>
+      </div>
+
+      <!-- Today's Forecast -->
+      <section class="city-highlights p-4 col-8 mx-auto">
+        <div class="contentCard mx-auto">
+          <h2 class="px-5 my-0 pt-4 pb-1" id="mainHeading">Today's Forecast</h2>
+          <div class="container d-flex flex-row justify-content-center p-0">
+            <!-- Main Card -->
+            <div class="card" id="mainCard">
+              <div class="card text-center" id="nuCard">
+                <h3 class="card-title mx-auto my-0 pt-3" id="headingCity"></h3>
+                <p id="weatherDate"></p>
+                <img
+                  class="card-img-top"
+                  id="weatherIcon"
+                  src="./Images/sunny.svg"
+                  alt=""
+                />
+                <h1 id="weatherTemp"></h1>
+              </div>
+              <div class="card-body mx-auto">
+                <p class="card-text" id="weatherDesc"></p>
+              </div>
+            </div>
+
+            <!-- Detail Card -->
+            <div class="card" id="detailCard">
+              <h3 class="detailHeading text-center my-auto">
+                Forecast Details
+              </h3>
+              <div class="card text-center" id="humidity">
+                <div>
+                  <p id="detailSubTitle">Humidity</p>
+                  <h4 class="card-title mx-auto" id="detailContent"></h4>
+                </div>
+                <div class="card text-center" id="windSpeed">
+                  <div class="subContent">
+                    <p id="detailSubTitle">Wind Speed</p>
+                    <h4 class="card-title mx-auto" id="detailContent"></h4>
+                  </div>
+                  <div class="card text-center" id="chance">
+                    <p id="detailSubTitle">Predictability</p>
+                    <h4 class="card-title mx-auto" id="detailContent"></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weekly Forecast -->
+      <section class="city-highlights p-4 col-8 mx-auto">
+        <div class="contentCard mx-auto" id="weeklyCard">
+          <h2 class="px-5 my-0 pt-4 pb-1" id="mainHeading">5-Days Forecast</h2>
+          <div
+            class="
+              container
+              d-flex
+              flex-row flex-wrap
+              justify-content-center
+              p-0
+            "
+            id="five-days"
+          ></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer text-center m-1">
+      © 2021 The Weather App
+      <br />
+      All Rights Reserved
+    </footer>
+
+    <!-- Src Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+  </body>
+</html>
