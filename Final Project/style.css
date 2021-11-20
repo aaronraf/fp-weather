@@ -1,168 +1,230 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif !important;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
 }
 
 #body {
-    color: white;
-    background-color: #0F1424;
+  color: white;
+  background-color: #0f1424;
 }
 
 #navbar {
-    margin-bottom: 10rem;
+  margin-bottom: 10rem;
+}
+
+#searchBar {
+  border-radius: 10px;
 }
 
 .container-fluid {
-    padding-left: 52px;
-    padding-right: 52px;
+  padding-left: 52px;
+  padding-right: 52px;
 }
 
 .nav-item {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-weight: 600;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 600;
 }
 
 #navActive {
-    width: 105px;
-    height: 36px;
-    background-color:#292E6E;
-    color: white;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 105px;
+  height: 36px;
+  background-color: #292e6e;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #navActive:hover {
-    background-color: #5847EB;
+  background-color: #5847eb;
 }
 
 #navInactive:hover {
-    color: white;
+  color: white;
+}
+
+#search {
+  width: 105px;
+  height: 36px;
+  background-color: #292e6e;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #greetings {
-    font-weight: 700;
+  font-weight: 700;
+}
+
+#about {
+  font-weight: 700;
 }
 
 .contentCard {
-    background-color: hsla(235, 45%, 61%, 0.2);
-    width: fit-content;
-    height: auto;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: hsla(235, 45%, 61%, 0.2);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#mainHeading{
-    font-weight: 600;
-    width: fit-content;
+#mainHeading {
+  font-weight: 600;
+  width: fit-content;
 }
 
-#mainCard{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    border-radius: 15px;
-    margin: 2rem 3rem;
-    width: 22rem;
-    background-color: hsl(235, 46%, 20%);
+#mainCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 15px;
+  margin: 2rem 3rem;
+  width: 22rem;
+  background-color: hsl(235, 46%, 20%);
 }
 
 #nuCard {
-    border-radius: 15px;
-    width: 22rem; 
-    background-color: hsl(246, 80%, 60%);
+  border-radius: 15px;
+  width: 22rem;
+  background-color: hsl(246, 80%, 60%);
 }
 
 #headingCity {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #weatherDate {
-    font-size: smaller;
+  font-size: smaller;
+  margin: 0%;
 }
 
 #weatherIcon {
-    width: 12rem;
-    align-self: center;
-    color: white;
+  width: 12rem;
+  align-self: center;
+  color: white;
 }
 
 #weatherTemp {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #weatherDesc {
-    font-size: 36px;
-    font-weight: 600;
+  font-size: 36px;
+  font-weight: 600;
 }
 
 #detailCard {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-radius: 15px;
-    margin: 2rem 3rem;
-    width: 22rem;
-    background-color: hsl(235, 46%, 20%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 15px;
+  margin: 2rem 3rem;
+  width: 22rem;
+  background-color: hsl(235, 46%, 20%);
 }
 
 #humidity {
-    border-radius: 15px;
-    width: 22rem; 
-    height: 337px;
-    background-color: #56C2E6;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  border-radius: 15px;
+  width: 22rem;
+  height: 337px;
+  background-color: #56c2e6;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #windSpeed {
-    border-radius: 15px;
-    width: 22rem; 
-    height: 224px;
-    background-color: #EF5DA8;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  border-radius: 15px;
+  width: 22rem;
+  height: 224px;
+  background-color: #ef5da8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #chance {
-    border-radius: 15px;
-    width: 22rem; 
-    height: 112px;
-    background-color: hsl(145, 58%, 55%);
+  border-radius: 15px;
+  width: 22rem;
+  height: 112px;
+  background-color: hsl(145, 58%, 55%);
 }
 
 .detailHeading {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 #detailSubTitle {
-    font-size: 18px;
-    font-weight: normal;
-    margin-top: 20px;
-    margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 6px;
 }
 
 #detailContent {
-    font-weight: 700;
-    font-size: 36px;
-    margin-bottom: 20px;
-    padding: 0%;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 20px;
+  padding: 0%;
 }
 
-#stats {
-    border-radius: 15px;
-    width: auto; 
-    height: auto;
-    margin: 1rem;
-    padding: 10px;
-    background-color: hsl(235, 46%, 20%);
+#weeklyCard {
+  padding-bottom: 6px;
+}
+
+#containerLeft {
+  margin-left: 16px;
+}
+
+#containerMiddle {
+  margin-left: 47px;
+  margin-right: 47px;
+}
+
+#containerRight {
+  margin-right: 15px;
+}
+
+#forecastCard {
+  width: 199px;
+  height: 199px;
+  margin: 29px;
+  border-radius: 15px;
+  background-color: hsl(246, 80%, 60%);
+}
+
+#forecastDesc {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+.pp > img {
+  border-radius: 50%;
+}
+
+#nsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin: 2rem 3rem;
+  width: 22rem;
+  background-color: hsl(246, 80%, 60%);
 }
