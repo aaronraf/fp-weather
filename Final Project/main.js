@@ -64,48 +64,48 @@ const information = async () => {
 
   let currIcon = "";
   if (currWeather.weather_state_abbr == "sn") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_snow 1.svg";
+    currIcon = "./Images/ic_snow 1.svg";
   } else if (currWeather.weather_state_abbr == "lc") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_1.svg";
+    currIcon = "./Images/ic_weather_1.svg";
   } else if (currWeather.weather_state_abbr == "sl") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_4.svg";
+    currIcon = "./Images/ic_weather_4.svg";
   } else if (currWeather.weather_state_abbr == "h") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_43.svg";
+    currIcon = "./Images/ic_weather_43.svg";
   } else if (currWeather.weather_state_abbr == "t") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_16.svg";
+    currIcon = "./Images/ic_weather_16.svg";
   } else if (currWeather.weather_state_abbr == "hr") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_8.svg";
+    currIcon = "./Images/ic_weather_8.svg";
   } else if (currWeather.weather_state_abbr == "lr") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_31.svg";
+    currIcon = "./Images/ic_weather_31.svg";
   } else if (currWeather.weather_state_abbr == "s") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_32.svg";
+    currIcon = "./Images/ic_weather_32.svg";
   } else if (currWeather.weather_state_abbr == "hc") {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_sky.svg";
+    currIcon = "./Images/ic_sky.svg";
   } else {
-    currIcon = "./Images/UIFresh-weather-icons/svg/ic_sun_1.svg";
+    currIcon = "./Images/ic_sun_1.svg";
   }
 
   let forecastIcon = "";
   if (forecast.weather_state_name == "sn") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_snow 1.svg";
+    forecastIcon = "./Images/ic_snow 1.svg";
   } else if (forecast.weather_state_name == "lc") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_1.svg";
+    forecastIcon = "./Images/ic_weather_1.svg";
   } else if (forecast.weather_state_name == "sl") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_4.svg";
+    forecastIcon = "./Images/ic_weather_4.svg";
   } else if (forecast.weather_state_name == "h") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_43.svg";
+    forecastIcon = "./Images/ic_weather_43.svg";
   } else if (forecast.weather_state_name == "t") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_16.svg";
+    forecastIcon = "./Images/ic_weather_16.svg";
   } else if (forecast.weather_state_name == "hr") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_8.svg";
+    forecastIcon = "./Images/ic_weather_8.svg";
   } else if (forecast.weather_state_name == "lr") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_31.svg";
+    forecastIcon = "./Images/ic_weather_31.svg";
   } else if (forecast.weather_state_name == "s") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_weather_32.svg";
+    forecastIcon = "./Images/ic_weather_32.svg";
   } else if (forecast.weather_state_name == "hc") {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_sky.svg";
+    forecastIcon = "./Images/ic_sky.svg";
   } else {
-    forecastIcon = "./Images/UIFresh-weather-icons/svg/ic_sun_1.svg";
+    forecastIcon = "./Images/ic_sun_1.svg";
   }
 
   // Today's Forecast
