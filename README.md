@@ -14,12 +14,12 @@ Every part of this project is an example code which shows how to do the followin
 * Design the pages using external CSS, Flexbox and Bootstrap
 * Fetch APIs and manipulate DOM using JavaScript
 
-...
+
 ## Found a bug?
 
 If you found an issue or would like to submit an improvement to this project, please submit an issue using the issues tab above.
 
-...
+
 ## Like this project?
 
 If you are feeling generous, buy me a coffee! - [https://www.buymeacoffee.com/aaron_raf/](https://buymeacoffee.com/aaron_raf)
