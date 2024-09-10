@@ -1,6 +1,7 @@
 # the-weather-app
 
 ![Design preview home page](./homePage.png)
+*First release design preview*
 
 ## Welcome! 👋
 
