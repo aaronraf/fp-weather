@@ -82,20 +82,69 @@ const getUserPosition = () => {
 	});
 };
 
+const parseDate = () => {
+	const today = new Date();
+	const date = today.getDate();
+	const year = today.getFullYear();
+	let month = "";
+
+	switch (today.getMonth()) {
+		case 1:
+			month = "January";
+			break;
+		case 2:
+			month = "February";
+      break;
+    case 3:
+      month = "March";
+      break;
+    case 4:
+      month = "April";
+      break;
+    case 5:
+      month = "May";
+      break;
+    case 6:
+      month = "June";
+      break;
+    case 7:
+      month = "July";
+      break;
+    case 8:
+      month = "August";
+      break;
+    case 9:
+      month = "September";
+      break;
+    case 10:
+      month = "October";
+      break;
+    case 11:
+      month = "November";
+      break;
+    case 12:
+      month = "December";
+      break;
+		default:
+			break;
+	}
+
+  return month + " " + date + ", " + year;
+};
+
 const information = async () => {
 	const location = await getUserPosition();
 	// || document.getElementById("search").innerText;
-	const weather = await getWeatherByCoordinates(location.lat, location.lon);
-
-	console.log(weather);
+	const api = await getWeatherByCoordinates(location.lat, location.lon);
+	const weatherId = Math.round(api.weather[0].id / 100);
+	console.log(api);
 
 	// const weather = weather.consolidated_weather[0];
 	// const forecast = weather.consolidated_weather.slice(1);
 
-	// DOM Manipulation
 	// Greetings
-	let today = new Date();
-	let curHr = today.getHours();
+	const today = new Date();
+	const curHr = today.getHours();
 
 	if (curHr < 12) {
 		document.querySelector("#greetings").innerHTML = `
@@ -112,65 +161,73 @@ const information = async () => {
 	}
 
 	let currIcon = "";
-	if (weather.weather_state_abbr == "sn") {
-		currIcon = "./Images/ic_snow 1.svg";
-	} else if (weather.weather_state_abbr == "lc") {
-		currIcon = "./Images/ic_weather_1.svg";
-	} else if (weather.weather_state_abbr == "sl") {
-		currIcon = "./Images/ic_weather_4.svg";
-	} else if (weather.weather_state_abbr == "h") {
-		currIcon = "./Images/ic_weather_43.svg";
-	} else if (weather.weather_state_abbr == "t") {
-		currIcon = "./Images/ic_weather_16.svg";
-	} else if (weather.weather_state_abbr == "hr") {
-		currIcon = "./Images/ic_weather_8.svg";
-	} else if (weather.weather_state_abbr == "lr") {
-		currIcon = "./Images/ic_weather_31.svg";
-	} else if (weather.weather_state_abbr == "s") {
-		currIcon = "./Images/ic_weather_32.svg";
-	} else if (weather.weather_state_abbr == "hc") {
-		currIcon = "./Images/ic_sky.svg";
-	} else {
-		currIcon = "./Images/ic_sun_1.svg";
+	let weatherDesc = "";
+	switch (weatherId) {
+		case 2:
+			currIcon = "./Images/ic_lightning.svg";
+			weatherDesc = "Thunderstorm";
+			break;
+		case 3:
+			currIcon = "./Images/ic_light_rain.svg";
+			weatherDesc = "Drizzle";
+			break;
+		case 5:
+			currIcon = "./Images/ic_heavy_rain.svg";
+			weatherDesc = "Rain";
+			break;
+		case 6:
+			currIcon = "./Images/ic_snow 1.svg";
+			weatherDesc = "Snow";
+			break;
+		case 7:
+			currIcon = "./Images/ic_lightning.svg";
+			weatherDesc = "Atmosphere";
+			break;
+		case 8:
+			currIcon = "./Images/ic_cloudy.svg";
+			weatherDesc = "Cloudy";
+			break;
+		default:
+			break;
 	}
-
-	// console.log(forecast.weather_state_name);
 
 	// Today's Forecast
 	// Main Card
-  let cityName = weather.name + ", " + weather.sys.country;
+	const cityName = api.name + ", " + api.sys.country;
+  const temp = Math.round(api.main.temp - 273.15);
 	document.querySelector("#nuCard").innerHTML = `
-        <h3 class="card-title mx-auto my-0 pt-3" id="headingCity">${
-					cityName
-				}</h3>
-        <p id="weatherDate">${today.getDate()}-${today.getMonth()}-${today.getFullYear()}</p>
+        <h3 class="card-title mx-auto my-0 pt-3" id="headingCity">${cityName}</h3>
+        <p id="weatherDate">${parseDate()}</p>
         <img class="card-img-top" id="weatherIcon" src="${currIcon}" alt="">
-        <h1 id="weatherTemp">${Math.round(weather.the_temp)}°C</h1>
+        <h1 id="weatherTemp">${temp}°C</h1>
     `;
 	document.querySelector("#weatherDesc").innerHTML = `
-        ${weather.weather_state_name}
+        ${weatherDesc}
     `;
 
 	// Weather Details
+  const humidity = api.main.humidity;
+  const windSpeed = api.wind.speed;
+  const tempMin = Math.round(api.main.temp_min - 273.15);
+	const tempMax = Math.round(api.main.temp_max - 273.15);
+
 	document.querySelector("#humidity").innerHTML = `
         <div>
             <p id="detailSubTitle">Humidity</p>
             <h4 class="card-title mx-auto" id="detailContent">${
-							weather.humidity
+							humidity
 						}%</h4>
         </div>
         <div class="card text-center" id="windSpeed">
             <div class="subContent">
                 <p id="detailSubTitle">Wind Speed</p>
-                <h4 class="card-title mx-auto" id="detailContent">${weather.wind_speed.toFixed(
-									2
-								)} mph</h4>
+                <h4 class="card-title mx-auto" id="detailContent">${windSpeed} m/s</h4>
             </div>
             <div class="card text-center" id="chance">
-                <p id="detailSubTitle">Predictability</p>
-                <h4 class="card-title mx-auto" id="detailContent">${
-									weather.predictability
-								}%</h4>
+                <p id="detailSubTitle">Min./Max. Temperature</p>
+                <h4 class="card-title mx-auto" id="detailContent">${tempMin}°C / ${
+									tempMax
+								}°C</h4>
             </div>
         </div>
     `;
