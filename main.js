@@ -233,41 +233,41 @@ const information = async () => {
     `;
 
 	// 5-Day Forecast
-	document.querySelector("#five-days").innerHTML = forecast
-		.map((forecast) => {
-			let forecastIcon = "";
-			if (forecast.weather_state_abbr == "sn") {
-				forecastIcon = "./Images/ic_snow 1.svg";
-			} else if (forecast.weather_state_abbr == "ln") {
-				forecastIcon = "./Images/ic_weather_1.svg";
-			} else if (forecast.weather_state_abbr == "sl") {
-				forecastIcon = "./Images/ic_weather_4.svg";
-			} else if (forecast.weather_state_abbr == "h") {
-				forecastIcon = "./Images/ic_weather_43.svg";
-			} else if (forecast.weather_state_abbr == "t") {
-				forecastIcon = "./Images/ic_weather_16.svg";
-			} else if (forecast.weather_state_abbr == "hr") {
-				forecastIcon = "./Images/ic_weather_8.svg";
-			} else if (forecast.weather_state_abbr == "lr") {
-				forecastIcon = "./Images/ic_weather_31.svg";
-			} else if (forecast.weather_state_abbr == "s") {
-				forecastIcon = "./Images/ic_weather_32.svg";
-			} else if (forecast.weather_state_abbr == "hc") {
-				forecastIcon = "./Images/ic_sky.svg";
-			} else {
-				forecastIcon = "./Images/ic_sun_1.svg";
-			}
-			return `
-        <div class="card text-center align-content-center justify-content-center p-2" id="forecastCard">
-              <p id="weatherDate">${forecast.applicable_date}</p>
-              <img id="forecastIcon" src="${forecastIcon}" alt="">
-              <p class="card-text m-0" id="fdforecastDesc">${forecast.weather_state_name}</p>
-              <p class="card-text" id="forecastDesc" {
-                ">${forecast.predictability}%</p>
-        </div>
-        `;
-		})
-		.join("");
+// 	document.querySelector("#five-days").innerHTML = forecast
+// 		.map((forecast) => {
+// 			let forecastIcon = "";
+// 			if (forecast.weather_state_abbr == "sn") {
+// 				forecastIcon = "./Images/ic_snow 1.svg";
+// 			} else if (forecast.weather_state_abbr == "ln") {
+// 				forecastIcon = "./Images/ic_weather_1.svg";
+// 			} else if (forecast.weather_state_abbr == "sl") {
+// 				forecastIcon = "./Images/ic_weather_4.svg";
+// 			} else if (forecast.weather_state_abbr == "h") {
+// 				forecastIcon = "./Images/ic_weather_43.svg";
+// 			} else if (forecast.weather_state_abbr == "t") {
+// 				forecastIcon = "./Images/ic_weather_16.svg";
+// 			} else if (forecast.weather_state_abbr == "hr") {
+// 				forecastIcon = "./Images/ic_weather_8.svg";
+// 			} else if (forecast.weather_state_abbr == "lr") {
+// 				forecastIcon = "./Images/ic_weather_31.svg";
+// 			} else if (forecast.weather_state_abbr == "s") {
+// 				forecastIcon = "./Images/ic_weather_32.svg";
+// 			} else if (forecast.weather_state_abbr == "hc") {
+// 				forecastIcon = "./Images/ic_sky.svg";
+// 			} else {
+// 				forecastIcon = "./Images/ic_sun_1.svg";
+// 			}
+// 			return `
+//         <div class="card text-center align-content-center justify-content-center p-2" id="forecastCard">
+//               <p id="weatherDate">${forecast.applicable_date}</p>
+//               <img id="forecastIcon" src="${forecastIcon}" alt="">
+//               <p class="card-text m-0" id="fdforecastDesc">${forecast.weather_state_name}</p>
+//               <p class="card-text" id="forecastDesc" {
+//                 ">${forecast.predictability}%</p>
+//         </div>
+//         `;
+// 		})
+// 		.join("");
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
